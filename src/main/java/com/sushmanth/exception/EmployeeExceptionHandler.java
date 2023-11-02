@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 
 @ControllerAdvice
 public class EmployeeExceptionHandler {
-	
+
 	@ExceptionHandler(Exception.class)
 	public ResponseEntity<String> handleGeneralException(EmployeeException e){
 		

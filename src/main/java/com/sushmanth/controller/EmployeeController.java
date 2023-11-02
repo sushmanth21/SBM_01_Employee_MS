@@ -22,7 +22,7 @@ import com.sushmanth.service.EmployeeServiceImpl;
 @RestController
 @RequestMapping(value = "/employee")
 public class EmployeeController {
-
+	
 	@Autowired
 	private EmployeeServiceImpl employeeService;
 
@@ -46,7 +46,7 @@ public class EmployeeController {
 	public ResponseEntity<String> deleteEmployee(@PathVariable int id) throws EmployeeException {
 
 		String result = employeeService.deleteEmployeeById(id);
-
+		
 		return new ResponseEntity<String>(result, HttpStatus.ACCEPTED);
 	}
 	
